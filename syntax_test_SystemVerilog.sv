@@ -542,7 +542,7 @@ join : f_label
 
 
 always_ff @(posedge clk or negedge rst_n) begin : proc_
-    if (~rst_n)
+    if (!rst_n)
         a <= '0;
 else if (en)
 // <- keyword.control.systemverilog

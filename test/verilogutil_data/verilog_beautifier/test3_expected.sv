@@ -38,7 +38,7 @@ module my_module (
 //------------------------------------------------------------------------------
 
    always_ff @(posedge clk or negedge rst_n)
-      if(~rst_n)
+      if(!rst_n)
          dout <= 0;
       else if(clk_en) begin
          dout    <= ~dout;
